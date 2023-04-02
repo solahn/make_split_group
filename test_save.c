@@ -3,7 +3,7 @@
 
 #define number_G 500
 #define number_L 500
-#define MAX_memory 9437184 // 9 MB
+#define MAX_memory 9437184 * 2 // 9 MB
 
 typedef struct {
     int group_id;
@@ -16,7 +16,7 @@ typedef struct {
     int split_layer_b[number_L];
 } Group;
 
-void trim_array(int split_data[][3], int n){
+void trim_array(int split_data[][5], int n){
     for (int i =0; i <n ; i++){
         // printf("%d %d", i, split_data[i][0]);
         split_data[i][0] += 1;
